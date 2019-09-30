@@ -286,6 +286,20 @@ export function on(event: "discardedError", callback: (args: DiscardedErrorEvent
 export function on(event: "orientationChanged", callback: (args: OrientationChangedEventData) => void, thisArg?: any);
 
 /**
+ * Appends new CSS class to the system classes and applies it to the root view.
+ * @param rootView - The root view of the application.
+ * @param cssClass - The CSS class to apply.
+ */
+export function applyCssClass(rootView: View, cssClass: string);
+
+/**
+ * Removes CSS class from the system classes and deletes it from the root view.
+ * @param rootView - The root view of the application.
+ * @param cssClass - The CSS class to delete.
+ */
+export function removeCssClass(rootView: View, cssClass: string);
+
+/**
  * This is the Android-specific application object instance.
  * Encapsulates methods and properties specific to the Android platform.
  * Will be undefined when TargetOS is iOS.
